@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-    <title>Home Questionnaire</title> 
+    <title> Movie Questionnaire</title> 
     
     <!--Placeholder for Segment Snippet --> 
  <script>
@@ -35,7 +35,7 @@
     
 <h1>What is your favorite movie that is available streaming?</h1> 
 <p>I am surveying friends so we can select a movie to watch together online.</p>  
-<form name="movies" onsubmit="identify(event)">
+<form name="movies" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm" onsubmit="identify(event)">
      Favorite movie available on streaming platforms:
     <input name="movie" required="" size="81" type="text" value="The Empire Strikes Back"/> 
     <br><br><br> 
@@ -52,7 +52,7 @@
     <br><br>
     
     
-    <input name="submit" type="submit" value="submit"/>
+    <button>Submit</button>
 </form> 
 
     <!--Placeholder for identify and track script -->
