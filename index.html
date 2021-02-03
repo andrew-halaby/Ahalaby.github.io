@@ -62,12 +62,12 @@
         var form = e.target;
         var email = form["email"].value;
         var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
+        var movie = form["movie"].value;
         var details = form["details"].value;
         var user = {
             email: email, 
             name: fullname, 
-            destination: destination, 
+            movie: movie,
             details: details
         };
         
@@ -88,7 +88,7 @@
           
         //analytics.track(event, [properties], [options], [callback]);
         analytics.track(
-                'Destination Submitted',
+                'Submitted',
                 {
                   label: 'client side',
                   user
