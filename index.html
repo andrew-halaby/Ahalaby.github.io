@@ -10,20 +10,6 @@
   analytics.page();
   }}();
 </script>
-    <!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXXX-Y', 'auto');
-ga('send', 'pageview');
-ga('set', 'USER_ID', 'USER_ID'); // Set the user ID using signed-in user_id.
-</script>
-<!-- End Google Analytics -->
-
-
 </head> 
 <body>
 
@@ -76,20 +62,15 @@ ga('set', 'USER_ID', 'USER_ID'); // Set the user ID using signed-in user_id.
         var fullname = form["fullname"].value;
         var movie = form["movie"].value;
         var details = form["details"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            movie: movie,
-            details: details
         };
         
         //in this case we grab the userId from the form, very unlikely IRL
-        // var myUserId = form["USER_ID"].value;
+         var myUserId = form["USER_ID"].value;
           
-        // analytics.identify(myUserId, {
+        analytics.identify(myUserId, {
         //    email: email,
         //    name: fullname
-        // });
+        });
         
         //or alternatively, more in the realm of possible IRL:
         //
@@ -103,7 +84,10 @@ ga('set', 'USER_ID', 'USER_ID'); // Set the user ID using signed-in user_id.
                 'Submitted',
                 {
                   label: 'client side',
-                  user
+                  email: 'email',
+                    name: 'fullname',
+                    movie: 'movie',
+                  details: 'details'
                   // { context: { ip: "0.0.0.0" }}, //with this we would override the value for ip in context
                 });
         //analytics.group;
