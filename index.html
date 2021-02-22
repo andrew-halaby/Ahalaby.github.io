@@ -65,9 +65,9 @@
         };
         
         //in this case we grab the userId from the form, very unlikely IRL
-         var myUserId = form["USER_ID"].value;
+         var USER_ID = form["USER_ID"].value;
           
-        analytics.identify(myUserId, {
+        analytics.identify(USER_ID, {
         //    email: email,
         //    name: fullname
         });
@@ -87,7 +87,8 @@
                   email: 'email',
                     name: 'fullname',
                     movie: 'movie',
-                  details: 'details'
+                  details: 'details',
+                    USER_ID: 'USER_ID'
                   // { context: { ip: "0.0.0.0" }}, //with this we would override the value for ip in context
                 });
         //analytics.group;
