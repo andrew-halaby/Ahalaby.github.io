@@ -62,14 +62,15 @@
         var fullname = form["fullname"].value;
         var movie = form["movie"].value;
         var details = form["details"].value;
+    //in this case we grab the userId from the form, very unlikely IRL
+         var USER_ID = form["USER_ID"].value;
         };
         
-        //in this case we grab the userId from the form, very unlikely IRL
-         var USER_ID = form["USER_ID"].value;
+
           
         analytics.identify(USER_ID, {
-        //    email: email,
-        //    name: fullname
+            email: email,
+            name: fullname
         });
         
         //or alternatively, more in the realm of possible IRL:
