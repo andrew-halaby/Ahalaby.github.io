@@ -55,7 +55,6 @@
 
     <!--Placeholder for identify and track script -->
     <script type="text/javascript">
-      var USER_ID
         function identify(e){
         e.preventDefault();
         var form = e.target;
@@ -64,14 +63,14 @@
         var movie = form["movie"].value;
         var details = form["details"].value;
     //in this case we grab the userId from the form, very unlikely IRL
-         USER_ID = form["USER_ID"].value
-        };
+        var USER_ID = form["USER_ID"].value
+        
         
 
           
         analytics.identify(USER_ID, {
-        //    email: email,
-        //    name: fullname
+            email: email,
+            name: fullname
         });
         
         //or alternatively, more in the realm of possible IRL:
@@ -87,8 +86,7 @@
                 {
                   label: 'client side',
                   movie: movie,
-                  details: details,
-                  USER_ID: USER_ID
+                  details: details
                   // { context: { ip: "0.0.0.0" }}, //with this we would override the value for ip in context
                 });
         //analytics.group;
