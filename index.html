@@ -55,7 +55,8 @@
 
     <!--Placeholder for identify and track script -->
     <script type="text/javascript">
-      function identify(e){
+      var USER_ID
+        function identify(e){
         e.preventDefault();
         var form = e.target;
         var email = form["email"].value;
@@ -63,7 +64,7 @@
         var movie = form["movie"].value;
         var details = form["details"].value;
     //in this case we grab the userId from the form, very unlikely IRL
-         var USER_ID = form["USER_ID"].value
+         USER_ID = form["USER_ID"].value
         };
         
 
