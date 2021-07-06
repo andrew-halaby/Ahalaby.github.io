@@ -45,6 +45,8 @@
     <br><br> 
     Email: <input name="email" required="" size="75" type="email" value="darth.vader@galacticempire.gov"/> 
     <br><br>
+     Name: <input name="birthdate" required="" size="75" type="text" value="09061978"/> 
+    <br><br> 
     
     Segment USER_ID: <input name="USER_ID" required="" size="75" type="text" value="dv1000000"/> 
     <br><br>
@@ -62,6 +64,7 @@
         var fullname = form["fullname"].value;
         var movie = form["movie"].value;
         var details = form["details"].value;
+            var birthdate = form["birthdate"].value;
     //in this case we grab the userId from the form, very unlikely IRL
         var USER_ID = form["USER_ID"].value
         
@@ -71,7 +74,7 @@
         analytics.identify(USER_ID, {
             email: email,
             name: fullname,
-            birthdate: "07/06/2021"
+            birthdate: birthdate
         });
         
         //or alternatively, more in the realm of possible IRL:
