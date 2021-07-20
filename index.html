@@ -48,7 +48,7 @@
     Birthdate: <input name="birthdate" required="" size="75" type="text" value="09061978"/> 
     <br><br> 
     
-    Segment USER_ID: <input name="USER_ID" required="" size="75" type="text" value="dv1000000"/> 
+//    Segment USER_ID: <input name="USER_ID" required="" size="75" type="text" value="dv1000000"/> 
     <br><br>
     
     
@@ -66,16 +66,16 @@
         var details = form["details"].value;
             var birthdate = form["birthdate"].value;
     //in this case we grab the userId from the form, very unlikely IRL
-        var USER_ID = form["USER_ID"].value
+    //    var USER_ID = form["USER_ID"].value
         
         
 
           
-        analytics.identify(USER_ID, {
-            email: email,
-            name: fullname,
-            birthdate: birthdate
-        });
+    //    analytics.identify(USER_ID, {
+     //       email: email,
+     //       name: fullname,
+     //       birthdate: birthdate
+     //   });
         
         //or alternatively, more in the realm of possible IRL:
         //
@@ -94,12 +94,12 @@
                   // { context: { ip: "0.0.0.0" }}, //with this we would override the value for ip in context
                 });
         //analytics.group;
-        analytics.group("0e8c78ea9d97a7b8185e8632", {
-            name: "Hasbro Pulse",
-            industry: "Toys",
-            employees: 5000,
-            plan: "enterprise",
-            "total billed": 1500
+        //analytics.group("0e8c78ea9d97a7b8185e8632", {
+        //    name: "Hasbro Pulse",
+        //    industry: "Toys",
+         //   employees: 5000,
+        //    plan: "enterprise",
+         //   "total billed": 1500
 });
         }
     </script>
